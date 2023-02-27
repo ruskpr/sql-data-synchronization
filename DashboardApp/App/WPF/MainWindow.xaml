@@ -17,7 +17,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="260" />
+            <ColumnDefinition Width="200" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
@@ -77,7 +77,7 @@
 
 
 
-            <TreeView MinWidth="230">
+            <TreeView MinWidth="200">
                 <!--HOME BUTTON-->
                 <TreeViewItem x:Name="btnHome"
                               Tag="HomePage"
@@ -116,7 +116,7 @@
 
         </StackPanel>
 
-        <!--CONTENT PANEL (pages go in here)-->
+        <!--CONTENT PANEL (pages go inside the frame)-->
         <Frame x:Name="mainContentFrame"
                Grid.Row="1"
                Grid.Column="1"
