@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "e2B+zhSsiHU0F/AasvB6+xl0BnnZYyaNd6lAGzoZveSilJVtj5fgw9q9WA9LwGyEbu7owfxpasyAyky/B4eYbQ==",
+  "dgSpecHash": "oyP/EHc44NPm7BgUZMdTmxkkxvTG212kuDuKEVcvO0yr7O5KT0DEOAayWv9xqn2iO5QerZWYVw1JdqApLmjArQ==",
   "success": true,
   "projectFilePath": "E:\\russ\\repos\\sql-data-synchronization\\DashboardApp\\App\\WPF\\WPF.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\rustu.koprulu\\.nuget\\packages\\materialdesigncolors\\2.1.1\\materialdesigncolors.2.1.1.nupkg.sha512",
+    "C:\\Users\\rustu.koprulu\\.nuget\\packages\\materialdesignthemes\\4.7.1\\materialdesignthemes.4.7.1.nupkg.sha512",
+    "C:\\Users\\rustu.koprulu\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
   "logs": []
 }
