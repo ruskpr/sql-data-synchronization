@@ -1,0 +1,15 @@
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\bin\Debug\net6.0\SyncApp_CLI.exe
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\bin\Debug\net6.0\SyncApp_CLI.deps.json
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\bin\Debug\net6.0\SyncApp_CLI.runtimeconfig.json
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\bin\Debug\net6.0\SyncApp_CLI.dll
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\bin\Debug\net6.0\SyncApp_CLI.pdb
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\SyncApp_CLI.csproj.AssemblyReference.cache
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\SyncApp_CLI.GeneratedMSBuildEditorConfig.editorconfig
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\SyncApp_CLI.AssemblyInfoInputs.cache
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\SyncApp_CLI.AssemblyInfo.cs
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\SyncApp_CLI.csproj.CoreCompileInputs.cache
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\SyncApp_CLI.dll
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\refint\SyncApp_CLI.dll
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\SyncApp_CLI.pdb
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\SyncApp_CLI.genruntimeconfig.cache
+E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_CLI\obj\Debug\net6.0\ref\SyncApp_CLI.dll
