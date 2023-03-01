@@ -1,10 +1,5 @@
 ﻿using Lib.DbObjects;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lib.Contexts
 {
@@ -15,6 +10,7 @@ namespace Lib.Contexts
         public DbSet<DeviceType> DeviceTypes { get; set; }
         public DbSet<UnitOfMeasure1> UnitsOfMeasure1 { get; set; }
         public DbSet<UnitOfMeasure2> UnitsOfMeasure2 { get; set; }
+        public DbSet<SynchronizationEntry> Synchronizations { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

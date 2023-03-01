@@ -11,6 +11,5 @@ namespace Lib.DbObjects
         public int Id { get; set; }
         public int RecordsAdded { get; set; }
         public DateTime TimeSynced { get; set; }
-        
     }
 }
