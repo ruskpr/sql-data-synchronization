@@ -1,7 +1,9 @@
-﻿class Program
+﻿using System.Diagnostics;
+
+class Program
 {
-    internal static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Test");
+        Thread.Sleep(15000);
     }
 }
