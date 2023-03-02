@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\App.xaml
-3-1088422970
+4622615657
 
-7-955480929
+8933493217
 246-1364115394
-MainWindow.xaml;Pages\HomePage.xaml;Pages\Settings.xaml;
+MainWindow.xaml;Pages\GenerateData.xaml;Pages\HomePage.xaml;Pages\Settings.xaml;
 
 True
 

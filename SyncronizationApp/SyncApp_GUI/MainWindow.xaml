@@ -106,6 +106,28 @@
                             </StackPanel>
                         </TreeViewItem.Header>
                     </TreeViewItem>
+                    <TreeViewItem x:Name="btnGenerateData"
+                                  Tag="GenerateData"
+                                  MouseLeftButtonUp="NavItem_MouseLeftButtonUp">
+                        <TreeViewItem.Header>
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0,0,0">
+                                <Viewbox Width="32"
+                                         Height="32">
+                                    <Canvas Width="32"
+                                            Height="32">
+                                        <materialDesign:PackIcon Kind="DatabaseRefresh"
+                                                                 Width="32"
+                                                                 Height="32" />
+                                    </Canvas>
+                                </Viewbox>
+                                <TextBlock Margin="10,0,0,0"
+                                           Text="GenerateData"
+                                           VerticalAlignment="Center"
+                                           FontSize="18" />
+                            </StackPanel>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
                 </TreeView>
             </StackPanel>
 
