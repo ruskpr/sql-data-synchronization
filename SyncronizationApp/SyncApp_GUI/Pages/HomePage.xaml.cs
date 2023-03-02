@@ -22,7 +22,6 @@ namespace SyncApp_GUI.Pages
     /// </summary>
     public partial class HomePage : Page
     {
-
         public HomePage()
         {
             InitializeComponent();
@@ -35,8 +34,14 @@ namespace SyncApp_GUI.Pages
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
-            // update ui to show if process is running
+            // check if bg process is running
+            bool processIsRunning = Lib.Core.BgProcess.IsRunning();
+
+            // update ui accordingly
+            //processIsRunning
         }
+
+        #region start / stop bg process button clicks
 
         private void btnStartBgService_Click(object sender, RoutedEventArgs e)
         {
@@ -47,5 +52,7 @@ namespace SyncApp_GUI.Pages
         {
             Lib.Core.BgProcess.KillAllInstances();
         }
+
+        #endregion
     }
 }

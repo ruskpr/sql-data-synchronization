@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:SyncApp_GUI"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="MainWindow" Height="550" Width="1000">
+        Title="MainWindow" Height="550" Width="1000"
+        MinHeight="550" MinWidth="1000">
     <Grid>
 
         <!--grid definitions-->
@@ -40,8 +41,7 @@
                             Background="Transparent"
                             Foreground="White"
                             BorderBrush="Transparent"
-                            ToolTip="MaterialDesignFloatingActionMiniLightButton"
-                            Margin="0,0,0,0"
+                            ToolTip="Click to go back"
                             Click="btnPrevious">
                         <materialDesign:PackIcon Width="35"
                                                  Height="35"
@@ -54,8 +54,7 @@
                             Background="Transparent"
                             Foreground="White"
                             BorderBrush="Transparent"
-                            ToolTip="MaterialDesignFloatingActionMiniLightButton"
-                            Margin="0,0,0,0"
+                            ToolTip="Click to go forward"
                             Click="btnNext">
                         <materialDesign:PackIcon Width="35"
                                                  Height="35"
@@ -70,51 +69,75 @@
         </StackPanel>
 
         <!--LEFT PANEL -->
-        <StackPanel Grid.Row="1"
-                    Grid.Column="0"
-                    Grid.RowSpan="3"
-                    Background="#232323">
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              Grid.RowSpan="3"
+              Background="#232323"
+              Margin="-32,0,0,0">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="48" />
+            </Grid.RowDefinitions>
+
+            <StackPanel>
+                <TreeView>
+                    <!--HOME BUTTON-->
+                    <TreeViewItem x:Name="btnHome"
+                                  Tag="HomePage"
+                                  MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp">
+                        <TreeViewItem.Header>
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0,0,0">
+                                <Viewbox Width="32"
+                                         Height="32">
+                                    <Canvas Width="32"
+                                            Height="32">
+                                        <materialDesign:PackIcon Kind="Home"
+                                                                 Width="32"
+                                                                 Height="32" />
+                                    </Canvas>
+                                </Viewbox>
+                                <TextBlock Margin="10,0,0,0"
+                                           Text="Home"
+                                           VerticalAlignment="Center"
+                                           FontSize="18" />
+                            </StackPanel>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                </TreeView>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <!--SETTINGS BUTTON (lower side panel)-->
+                <TreeView>
+                    <TreeViewItem x:Name="btnSettings"
+                                  Tag="Settings"
+                                  MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp">
+                        <TreeViewItem.Header>
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0,0,0">
+                                <Viewbox Width="32"
+                                         Height="32">
+                                    <Canvas Width="32"
+                                            Height="32">
+                                        <materialDesign:PackIcon Kind="Cog"
+                                                                 Width="32"
+                                                                 Height="32" />
+                                    </Canvas>
+                                </Viewbox>
+                                <TextBlock Margin="10,0,0,0"
+                                           Text="Settings"
+                                           VerticalAlignment="Center"
+                                           FontSize="18" />
+                            </StackPanel>
+                        </TreeViewItem.Header>
+                    </TreeViewItem>
+                </TreeView>
+            </StackPanel>
 
 
-
-            <TreeView MinWidth="200">
-                <!--HOME BUTTON-->
-                <TreeViewItem x:Name="btnHome"
-                              Tag="HomePage"
-                              MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp">
-                    <TreeViewItem.Header>
-                        <StackPanel Orientation="Horizontal">
-                            <Viewbox Width="16"
-                                     Height="16">
-                                <Canvas Width="24"
-                                        Height="24">
-                                    <materialDesign:PackIcon Kind="Home"
-                                                             Width="24"
-                                                             Height="24" />
-                                </Canvas>
-                            </Viewbox>
-                            <TextBlock Margin="8,0,0,0"
-                                       Text="Home" />
-                        </StackPanel>
-                    </TreeViewItem.Header>
-                </TreeViewItem>
-                <!-- DROPDOWN -->
-                <TreeViewItem Header="Dropdown">
-                    <TreeViewItem Header="Dropdown Item"
-                                  Tag="Products/DataTable/GetProductThatNameContains"
-                                  MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp" />
-                    <TreeViewItem Header="Dropdown Item"
-                                  Tag="Products/DataTable/GetProductsByCategoryName"
-                                  MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp" />
-                    <TreeViewItem Header="Dropdown Item"
-                                  Tag="Products/DataTable/GetProductByPriceRange"
-                                  MouseLeftButtonUp="TreeViewItem_MouseLeftButtonUp" />
-                </TreeViewItem>
-
-
-            </TreeView>
-
-        </StackPanel>
+        </Grid>
 
         <!--CONTENT PANEL (pages go inside the frame)-->
         <Frame x:Name="mainContentFrame"

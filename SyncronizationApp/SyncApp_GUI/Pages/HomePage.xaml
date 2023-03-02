@@ -9,16 +9,30 @@
       Title="HomePage">
 
     <Grid>
-        <Label Content="Background Service Control Panel" />
-
-        <StackPanel>
+        <StackPanel Margin="30">
+            <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                       Foreground="White"
+                       TextAlignment="Center"
+                       Padding="0,0,0,20"
+                       Text="Background Service Control Panel" />
+            <DockPanel HorizontalAlignment="Center">
+                
             <Button x:Name="btnStartBgService"
                     Click="btnStartBgService_Click"
-                    Content="Start Service" />
-
+                    Content="Start Service"
+                    Width="150"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedLightButton" />
+                
             <Button x:Name="btnKillBgService"
                     Click="btnKillBgService_Click"
-                    Content="Stop Service" />
+                    Content="Stop Service"
+                    Width="150"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    ToolTip="Resource name: MaterialDesignRaisedLightButton" />
+            </DockPanel>
         </StackPanel>
     </Grid>
 </Page>
