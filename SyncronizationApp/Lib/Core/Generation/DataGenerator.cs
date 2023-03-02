@@ -42,8 +42,8 @@ namespace Lib.Core.Generation
             {
                 var entry = new DataEntry
                 {
+                    // add all fields except id...
                     DeviceName = "random"
-
                 };
 
             }
