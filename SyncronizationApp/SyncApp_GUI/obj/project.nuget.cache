@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "65ZoazDs3uoVrk3NrSnelPG3oJwutbFoNw5gdvZZd8Hj88/widx0TySE1PbKKaZk4PyiyiDtEICkexsEif66/g==",
+  "success": true,
+  "projectFilePath": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rustu.koprulu\\.nuget\\packages\\materialdesigncolors\\2.1.1\\materialdesigncolors.2.1.1.nupkg.sha512",
+    "C:\\Users\\rustu.koprulu\\.nuget\\packages\\materialdesignthemes\\4.7.1\\materialdesignthemes.4.7.1.nupkg.sha512",
+    "C:\\Users\\rustu.koprulu\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

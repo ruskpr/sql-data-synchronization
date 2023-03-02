@@ -27,8 +27,16 @@ namespace Lib.Core
                         .Show();
                     break;
                 case NotificationType.SyncSuccess:
+                    new ToastContentBuilder()
+                        .AddText("Successfully Synchronized!")
+                        .AddText("Syncronization service has successfully updated you database.")
+                        .Show();
                     break;
                 case NotificationType.SyncFailed:
+                    new ToastContentBuilder()
+                        .AddText("Failed to Synchronize")
+                        .AddText("Syncronization service could not connect to your database.")
+                        .Show();
                     break;
                 default:
                     break;

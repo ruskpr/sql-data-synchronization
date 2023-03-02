@@ -17,6 +17,7 @@ namespace SQL_syncing_service
             {
                 // [method to sync data goes here] ex. SyncData()
                 Thread.Sleep(delay);
+                WindowsNotification.Show(NotificationType.SyncSuccess);
             }
 
             WindowsNotification.Show(NotificationType.ServiceStopped);
