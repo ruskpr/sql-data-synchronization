@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,18 +26,9 @@ namespace SyncApp_GUI
         public MainWindow()
         {
             InitializeComponent();
-            string str = Directory.GetCurrentDirectory();
-            if (Process.GetProcessesByName("SQL Sync Service").Length > 0)
-            {
-                MessageBox.Show("Process is already running.");
-            }
-            else
-            {
-                Process.Start("bgservice\\SQL Sync Service.exe");
-            }
 
             // show home page content on start up
-            //GoToHomePage();
+            GoToHomePage();
         }
 
         private void TreeViewItem_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

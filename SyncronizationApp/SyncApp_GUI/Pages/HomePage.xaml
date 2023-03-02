@@ -9,6 +9,16 @@
       Title="HomePage">
 
     <Grid>
-        
+        <Label Content="Background Service Control Panel" />
+
+        <StackPanel>
+            <Button x:Name="btnStartBgService"
+                    Click="btnStartBgService_Click"
+                    Content="Start Service" />
+
+            <Button x:Name="btnKillBgService"
+                    Click="btnKillBgService_Click"
+                    Content="Stop Service" />
+        </StackPanel>
     </Grid>
 </Page>

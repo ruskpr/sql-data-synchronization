@@ -10,17 +10,17 @@ namespace SQL_syncing_service
         
         public static void Main()
         {
-            WindowsNotification.Show(NotificationType.ServiceStarted);
+            WindowsNotification.Show(NotiType.ServiceStarted);
             bool running = true;
             int delay = AppConfig.SyncIntervalInMilliseconds;
             while (running)
             {
                 // [method to sync data goes here] ex. SyncData()
                 Thread.Sleep(delay);
-                WindowsNotification.Show(NotificationType.SyncSuccess);
+                WindowsNotification.Show(NotiType.SyncSuccess);
             }
 
-            WindowsNotification.Show(NotificationType.ServiceStopped);
+            WindowsNotification.Show(NotiType.ServiceStopped);
         }
     }
 }

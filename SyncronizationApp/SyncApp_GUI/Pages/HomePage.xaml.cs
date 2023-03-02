@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace SyncApp_GUI.Pages
 {
@@ -20,9 +22,30 @@ namespace SyncApp_GUI.Pages
     /// </summary>
     public partial class HomePage : Page
     {
+
         public HomePage()
         {
             InitializeComponent();
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Tick += Timer_Tick;
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Start();
+        }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            // update ui to show if process is running
+        }
+
+        private void btnStartBgService_Click(object sender, RoutedEventArgs e)
+        {
+            Lib.Core.BgProcess.StartProcessWithMaxOneInstance();
+        }
+
+        private void btnKillBgService_Click(object sender, RoutedEventArgs e)
+        {
+            Lib.Core.BgProcess.KillAllInstances();
         }
     }
 }

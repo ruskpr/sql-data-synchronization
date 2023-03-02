@@ -2,16 +2,16 @@
 
 namespace Lib.Core
 {
-    public enum NotificationType { ServiceStarted, ServiceStopped, SyncSuccess, SyncFailed }
+    public enum NotiType { ServiceStarted, ServiceStopped, SyncSuccess, SyncFailed }
 
     public static class WindowsNotification
     {
         
-        public static void Show(NotificationType notificationType)
+        public static void Show(NotiType notificationType)
         {
             switch (notificationType)
             {
-                case NotificationType.ServiceStarted:
+                case NotiType.ServiceStarted:
 
                     new ToastContentBuilder()
                         .AddText("Syncronization service has started!")
@@ -20,19 +20,19 @@ namespace Lib.Core
                         .Show();
 
                     break;
-                case NotificationType.ServiceStopped:
+                case NotiType.ServiceStopped:
                     new ToastContentBuilder()
                         .AddText("Alert!")
                         .AddText("Syncronization service has stopped running.")
                         .Show();
                     break;
-                case NotificationType.SyncSuccess:
+                case NotiType.SyncSuccess:
                     new ToastContentBuilder()
                         .AddText("Successfully Synchronized!")
                         .AddText("Syncronization service has successfully updated you database.")
                         .Show();
                     break;
-                case NotificationType.SyncFailed:
+                case NotiType.SyncFailed:
                     new ToastContentBuilder()
                         .AddText("Failed to Synchronize")
                         .AddText("Syncronization service could not connect to your database.")
