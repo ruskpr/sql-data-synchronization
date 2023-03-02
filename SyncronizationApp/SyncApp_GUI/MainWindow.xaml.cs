@@ -26,7 +26,15 @@ namespace SyncApp_GUI
         {
             InitializeComponent();
             string str = Directory.GetCurrentDirectory();
-            Process.Start("bgservice\\SQL Sync Service.exe");
+            if (Process.GetProcessesByName("SQL Sync Service").Length > 0)
+            {
+                MessageBox.Show("Process is already running.");
+            }
+            else
+            {
+                Process.Start("bgservice\\SQL Sync Service.exe");
+            }
+
             // show home page content on start up
             //GoToHomePage();
         }
