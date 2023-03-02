@@ -13,9 +13,11 @@
             <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}"
                        Foreground="White"
                        TextAlignment="Center"
-                       Padding="0,0,0,20"
+                       
                        Text="Background Service Control Panel" />
-            <DockPanel HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center"
+                        Margin="20">
                 
             <Button x:Name="btnStartBgService"
                     Click="btnStartBgService_Click"
@@ -32,7 +34,14 @@
                     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                     Style="{StaticResource MaterialDesignRaisedLightButton}"
                     ToolTip="Resource name: MaterialDesignRaisedLightButton" />
-            </DockPanel>
+            </StackPanel>
+
+            <TextBlock x:Name="lbStatus"
+                Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                       Foreground="White"
+                       TextAlignment="Center"
+                       Text="Status: Unknown" />
+            
         </StackPanel>
     </Grid>
 </Page>

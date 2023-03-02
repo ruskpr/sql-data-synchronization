@@ -38,7 +38,8 @@ namespace SyncApp_GUI.Pages
             bool processIsRunning = Lib.Core.BgProcess.IsRunning();
 
             // update ui accordingly
-            //processIsRunning
+            string status = processIsRunning ? "Running" : "Not running";
+            lbStatus.Text = $"Status: {status}";
         }
 
         #region start / stop bg process button clicks
