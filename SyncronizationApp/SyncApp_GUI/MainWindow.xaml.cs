@@ -33,10 +33,10 @@ namespace SyncApp_GUI
             GoToHomePage();
         }
 
-        private void TreeViewItem_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void NavItem_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             var item = (TreeViewItem)sender;
-            string tag = item.Tag.ToString();
+            string tag = item.Tag.ToString() ?? "HomePage";
 
             mainContentFrame.NavigationService.Navigate(new Uri($"Pages/{tag}.xaml", UriKind.Relative));
         }
@@ -67,7 +67,6 @@ namespace SyncApp_GUI
 
         #region onClosing
 
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (!BgProcess.IsRunning())
@@ -84,7 +83,7 @@ namespace SyncApp_GUI
                 case MessageBoxResult.Cancel: // cancel app closing
                     e.Cancel = true;
                     break;
-                case MessageBoxResult.Yes: // do nothing (bg service keeps running)
+                case MessageBoxResult.Yes: // do nothing (bg service keeps running after app close)
                     break;
                 case MessageBoxResult.No: // stop bg service
                     BgProcess.KillAllInstances();

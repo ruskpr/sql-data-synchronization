@@ -1,9 +1,6 @@
 ﻿using Lib.Core;
-using Microsoft.Identity.Client;
-using System.Configuration;
-using System.Diagnostics;
 
-namespace SQL_syncing_service 
+namespace SQL_syncing_service
 {
     class Program
     {
@@ -11,16 +8,15 @@ namespace SQL_syncing_service
         public static void Main()
         {
             WindowsNotification.Show(NotiType.ServiceStarted);
-            bool running = true;
+            bool _running = true;
             int delay = AppConfig.SyncIntervalInMilliseconds;
-            while (running)
+            while (_running)
             {
                 // [method to sync data goes here] ex. SyncData()
                 Thread.Sleep(delay);
                 WindowsNotification.Show(NotiType.SyncSuccess);
             }
 
-            WindowsNotification.Show(NotiType.ServiceStopped);
         }
     }
 }
