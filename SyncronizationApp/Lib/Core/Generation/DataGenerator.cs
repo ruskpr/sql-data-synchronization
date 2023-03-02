@@ -10,7 +10,7 @@ namespace Lib.Core.Generation
 {
     public class DataGenerator
     {
-        public enum DeviceType
+        public enum DeviceTypeID
         {
             Electric = 1,
             Gps = 2,
@@ -18,32 +18,38 @@ namespace Lib.Core.Generation
             H2O = 4,
         }
 
-        public enum UOM1Type
-        {
-            kWH = 1,
-            Latitude = 2,
-            CF = 3,
-            CM= 4,
-        }
+        //public enum UOM1Type
+        //{
+        //    kWH = 1,
+        //    Latitude = 2,
+        //    CF = 3,
+        //    CM= 4,
+        //}
 
-        public enum UOM2Type
-        {
-            kVA = 1,
-            Longitude = 2,
-            PSI = 3,
-            TEMPCels = 4,
-        }
+        //public enum UOM2Type
+        //{
+        //    kVA = 1,
+        //    Longitude = 2,
+        //    PSI = 3,
+        //    TEMPCels = 4,
+        //}
 
-        public void GenerateData(string path)
+        public void GenerateData()
         {
             SqliteContext db = new SqliteContext();
-
+            Random rnd = new Random();
             for (int i = 0; i < 10000; i++)
             {
                 var entry = new DataEntry
                 {
                     // add all fields except id...
-                    DeviceName = "random"
+                    DeviceName = "random",
+                    DeviceType = new DeviceType { Id = (int)DeviceTypeID.Electric},
+                    Timestamp = DateTime.Now,
+                    UOM1 = new UnitOfMeasure1 { Id = (int)DeviceTypeID.Electric },
+                    UOM1Value= double.Parse(rnd.Next(0, 100) + "." + rnd.Next(0, 100000000)),
+                    UOM2 = new UnitOfMeasure2 { Id = (int)DeviceTypeID.Electric },
+                    UOM2Value = double.Parse(rnd.Next(0, 10) + "." + rnd.Next(0, 100000000)),
                 };
 
             }
