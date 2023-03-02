@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "srwS9z3OdTIKJNHufIuGE4AM9cmcrCWAurngNXK4wnNeBzdJ+NVHcIPn3qItNT/Hm8mm1VQ6j8USwAl1ng7hHg==",
+  "dgSpecHash": "UeCyKigac3GBfFXgh4tDsIY6NgAfp6H6cEitJaGgQ1pazjVqwuPG7MSTR+IUx0dBKKgnAxkO+N7F97RkuXh+4g==",
   "success": true,
   "projectFilePath": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\SyncApp_CLI\\SQL_syncing_service.csproj",
   "expectedPackageFiles": [

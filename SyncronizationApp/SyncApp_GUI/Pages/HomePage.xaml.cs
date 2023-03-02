@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF.Pages
+namespace SyncApp_GUI.Pages
 {
     /// <summary>
     /// Interaction logic for HomePage.xaml

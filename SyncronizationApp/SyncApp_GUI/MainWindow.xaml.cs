@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPF
+namespace SyncApp_GUI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,7 +25,8 @@ namespace WPF
         public MainWindow()
         {
             InitializeComponent();
-
+            string str = Directory.GetCurrentDirectory();
+            Process.Start("bgservice\\SQL Sync Service.exe");
             // show home page content on start up
             //GoToHomePage();
         }

@@ -8,7 +8,7 @@ namespace SQL_syncing_service
     class Program
     {
         
-        public static void Main(string[] args)
+        public static void Main()
         {
             WindowsNotification.Show(NotificationType.ServiceStarted);
             bool running = true;
