@@ -10,5 +10,6 @@
 
     <Grid>
         <Label Content="Generate Data" />
+        <Button Click="Button_Click">test</Button>
     </Grid>
 </Page>

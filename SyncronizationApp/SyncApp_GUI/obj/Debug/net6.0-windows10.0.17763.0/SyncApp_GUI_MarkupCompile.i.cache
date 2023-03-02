@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\obj\Debug\net6.0-windows10.0.17763.0\
+C:\Users\prathiks.jeyakuma\Source\Repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\obj\Debug\net6.0-windows10.0.17763.0\
 SyncApp_GUI
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\App.xaml
+C:\Users\prathiks.jeyakuma\Source\Repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\App.xaml
 4622615657
 
 8933493217
-246-1364115394
+246157888280
 MainWindow.xaml;Pages\GenerateData.xaml;Pages\HomePage.xaml;Pages\Settings.xaml;
 
 True

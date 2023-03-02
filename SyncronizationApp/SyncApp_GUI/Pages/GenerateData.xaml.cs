@@ -24,5 +24,11 @@ namespace SyncApp_GUI.Pages
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Lib.Core.Generation.DataGenerator generator = new Lib.Core.Generation.DataGenerator();
+            generator.GenerateData();
+        }
     }
 }
