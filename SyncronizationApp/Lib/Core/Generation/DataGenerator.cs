@@ -43,7 +43,7 @@ namespace Lib.Core.Generation
                 var entry = new DataEntry
                 {
                     // add all fields except id...
-                    DeviceName = "random",
+                    DeviceName = "ELECTRIC",
                     DeviceType = new DeviceType { Id = (int)DeviceTypeID.Electric},
                     Timestamp = DateTime.Now,
                     UOM1 = new UnitOfMeasure1 { Id = (int)DeviceTypeID.Electric },
@@ -51,6 +51,21 @@ namespace Lib.Core.Generation
                     UOM2 = new UnitOfMeasure2 { Id = (int)DeviceTypeID.Electric },
                     UOM2Value = double.Parse(rnd.Next(0, 10) + "." + rnd.Next(0, 100000000)),
                 };
+                for (int j = 0; j < 4; j++)
+                {
+                    var entry2 = new DataEntry
+                    {
+                        // add all fields except id...
+                        DeviceName = "GPS",
+                        DeviceType = new DeviceType { Id = j },
+                        Timestamp = DateTime.Now,
+                        UOM1 = new UnitOfMeasure1 { Id = j },
+                        UOM1Value = double.Parse(rnd.Next(49, 52) + "." + rnd.Next(0, 100000000)),
+                        UOM2 = new UnitOfMeasure2 { Id = j },
+                        UOM2Value = double.Parse(rnd.Next(-111, -109) + "." + rnd.Next(0, 100000000)),
+                    }; 
+                }
+                    
 
             }
 
