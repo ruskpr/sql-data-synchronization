@@ -31,7 +31,7 @@
                        Text="Generate Random Data" />
             <TextBlock Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
                        Foreground="White"
-                       Text="Click On the Button To generate Random Data" />
+                       Text="Click On the button to generate Random Data" />
 
             <Button Click="Button_Click">Generate Data</Button>
 
