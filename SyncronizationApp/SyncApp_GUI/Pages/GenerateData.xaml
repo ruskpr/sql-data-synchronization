@@ -9,7 +9,50 @@
       Title="GenerateData">
 
     <Grid>
-        <Label Content="Generate Data" />
-        <Button Click="Button_Click">test</Button>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1"
+                    Grid.ColumnSpan="3">
+
+            <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                       Foreground="White"
+                       Text="Generate Random Data" />
+            <TextBlock Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                       Foreground="White"
+                       Text="Click On the Button To generate Random Data" />
+
+            <Button Click="Button_Click">Generate Data</Button>
+
+            <TextBlock x:Name="lbErrorMsg" Foreground="Red"
+                       Text=""
+                       Margin="0,20,0,0"
+                Style="{StaticResource MaterialDesignButtonTextBlock}"
+                        />
+        </StackPanel>
+
+        <DataGrid x:Name="dgData"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="3"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="True"
+                  SelectionMode="Extended"
+                  SelectionUnit="Cell" />
+
     </Grid>
+   
+
 </Page>

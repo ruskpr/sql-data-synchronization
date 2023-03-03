@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lib.Core.EF.DbContexts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace SyncApp_GUI.Pages
     /// </summary>
     public partial class GenerateData : Page
     {
+        SqliteContext sqlite = new SqliteContext();
         public GenerateData()
         {
             InitializeComponent();
+            dgData.ItemsSource = sqlite.DataEntries.ToList();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

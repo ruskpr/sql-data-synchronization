@@ -244,3 +244,7 @@ E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\bin\Debug\n
 E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\bin\Debug\net6.0-windows10.0.17763.0\Humanizer.dll
 E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\bin\Debug\net6.0-windows10.0.17763.0\Microsoft.EntityFrameworkCore.Design.dll
 E:\russ\repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\bin\Debug\net6.0-windows10.0.17763.0\Mono.TextTemplating.dll
+C:\Users\prathiks.jeyakuma\Source\Repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\bin\Debug\net6.0-windows10.0.17763.0\SyncApp_GUI.dll.config
+C:\Users\prathiks.jeyakuma\Source\Repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\bin\Debug\net6.0-windows10.0.17763.0\Humanizer.dll
+C:\Users\prathiks.jeyakuma\Source\Repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\bin\Debug\net6.0-windows10.0.17763.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\prathiks.jeyakuma\Source\Repos\sql-data-synchronization\SyncronizationApp\SyncApp_GUI\bin\Debug\net6.0-windows10.0.17763.0\Mono.TextTemplating.dll
