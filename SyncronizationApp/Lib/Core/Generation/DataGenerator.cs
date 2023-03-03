@@ -11,11 +11,11 @@ namespace Lib.Core.Generation
     public class DataGenerator
     {
 
-        public void GenerateData()
+        public void GenerateData(int numRecords)
         {
             SqliteContext sqliteDb = new SqliteContext();
             Random rnd = new Random();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < numRecords / 4; i++)
             {
                 
                 for (int j = 0; j < 4; j++)

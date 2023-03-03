@@ -17,32 +17,22 @@ namespace Lib.Core.Synchronization
 
         public static bool IsSynced()
         {
-            // compare sqlite and sqlserver to see if they are syncronized
+            // see if there are any records queued inside the offline db
+            // if there are IsSynced is false
+            // if there are no records, IsSynced is true
             SqliteContext sqlite = new SqliteContext();
-            SqlServerContext sqlServer = new SqlServerContext();
-
             List<DataEntry> sqliteRecords = sqlite.DataEntries.ToList();
-            List<DataEntry> sqlServerRecords = sqlServer.DataEntries.ToList();
 
-            //1. loop through both tables to see if are the same
-            // if they are, return true, else false
-            for (int i = 0; i < sqliteRecords.Count; i++)
+            if (sqliteRecords.Count == 0)
             {
-                try
-                {
-                    if (sqliteRecords[i].Id != sqlServerRecords[i].Id)
-                    {
-                        return false;
-                    }
-                }
-                catch 
-                {
-                    return false;
-                }
-                
+                // no records to sync
+                WindowsNotification.Show("Up to date✔", "No records to sync.");
+                return true;
             }
-                
-            return false;
+            else 
+            {
+                return false;
+            }
         }
 
         public static void SyncData()
@@ -66,27 +56,43 @@ namespace Lib.Core.Synchronization
             }
             else // if not sync, synchronize
             {
-                return;
+                
                 _isSyncing = true;
+
+                // check if sqlite db has any records
+                // if it does push them to sqlserver
                 SqliteContext sqlite = new SqliteContext();
-
-                //check if sqlserver contains record, if not add it
-                List<DataEntry> offlineData = sqlite.DataEntries.ToList();
-
-                foreach (var record in offlineData)
+                List<DataEntry> offlineRecords = sqlite.DataEntries.ToList();
+                if (sqlite.DataEntries.Count() > 0)
                 {
-                    if (!sqlServer.DataEntries.Contains(record)) 
-                    {
-                        record.Id = null;
-                        sqlServer.Add(record);
-                    }
+                    // set ids to null to avoid auto increment exception
+                    offlineRecords.ForEach(x => x.Id = null);
+
+                    // add all offline data to online db
+                    sqlServer.AddRange(offlineRecords);
+
+                    // remove all items from sqlite database
+                    sqlite.RemoveRange(offlineRecords);
                 }
 
+                // add to metadata table
+                var syncRecord = new SynchronizationEntry()
+                {
+                    RecordsAdded = offlineRecords.Count,
+                    TimeSynced = DateTime.Now
+                };
+                sqlServer.Synchronizations.Add(syncRecord);
+
+                // update both databases
                 int records = sqlServer.SaveChanges();
+                sqlite.SaveChanges();
                 _isSyncing = false;
+
+                // show message
                 WindowsNotification.Show("Successfully syncronized!",
                                         $"{records.ToString("n")} records added to the online database.");
             }
+
         }
     }
 }
