@@ -40,33 +40,22 @@ namespace Lib.Core.Generation
             Random rnd = new Random();
             for (int i = 0; i < 10000; i++)
             {
-                var entry = new DataEntry
-                {
-                    // add all fields except id...
-                    DeviceName = "ELECTRIC",
-                    DeviceType = new DeviceType { Id = (int)DeviceTypeID.Electric},
-                    Timestamp = DateTime.Now,
-                    UOM1 = new UnitOfMeasure1 { Id = (int)DeviceTypeID.Electric },
-                    UOM1Value= double.Parse(rnd.Next(0, 100) + "." + rnd.Next(0, 100000000)),
-                    UOM2 = new UnitOfMeasure2 { Id = (int)DeviceTypeID.Electric },
-                    UOM2Value = double.Parse(rnd.Next(0, 10) + "." + rnd.Next(0, 100000000)),
-                };
+                
                 for (int j = 0; j < 4; j++)
                 {
-                    var entry2 = new DataEntry
+                    var entry = new DataEntry
                     {
                         // add all fields except id...
-                        DeviceName = "GPS",
-                        DeviceType = new DeviceType { Id = j },
+                        DeviceName = "random",
+                        DeviceType = "test",
                         Timestamp = DateTime.Now,
-                        UOM1 = new UnitOfMeasure1 { Id = j },
+                        UOM1 = "test",
                         UOM1Value = double.Parse(rnd.Next(49, 52) + "." + rnd.Next(0, 100000000)),
-                        UOM2 = new UnitOfMeasure2 { Id = j },
+                        UOM2 = "test",
                         UOM2Value = double.Parse(rnd.Next(-111, -109) + "." + rnd.Next(0, 100000000)),
                     }; 
+                    db.Add(entry);
                 }
-                    
-
             }
 
             db.SaveChanges();
