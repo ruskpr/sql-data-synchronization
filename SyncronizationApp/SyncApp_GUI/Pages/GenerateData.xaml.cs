@@ -32,6 +32,7 @@ namespace SyncApp_GUI.Pages
         {
             Lib.Core.Generation.DataGenerator generator = new Lib.Core.Generation.DataGenerator();
             generator.GenerateData();
+            dgData.ItemsSource = sqlite.DataEntries.ToList();
         }
     }
 }

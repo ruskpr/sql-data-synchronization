@@ -21,9 +21,6 @@ namespace Lib.Core.EF.DbContexts
 
         // here are the 4 db sets (database tables) for our current schema
         public DbSet<DataEntry> DataEntries { get; set; }
-        public DbSet<DeviceType> DeviceTypes { get; set; }
-        public DbSet<UnitOfMeasure1> UnitsOfMeasure1 { get; set; }
-        public DbSet<UnitOfMeasure2> UnitsOfMeasure2 { get; set; }
         public DbSet<SynchronizationEntry> Synchronizations { get; set; }
 
 
