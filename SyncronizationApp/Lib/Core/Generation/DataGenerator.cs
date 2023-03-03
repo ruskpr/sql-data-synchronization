@@ -10,29 +10,6 @@ namespace Lib.Core.Generation
 {
     public class DataGenerator
     {
-        public enum DeviceTypeID
-        {
-            Electric = 1,
-            Gps = 2,
-            Gas = 3,
-            H2O = 4,
-        }
-
-        //public enum UOM1Type
-        //{
-        //    kWH = 1,
-        //    Latitude = 2,
-        //    CF = 3,
-        //    CM= 4,
-        //}
-
-        //public enum UOM2Type
-        //{
-        //    kVA = 1,
-        //    Longitude = 2,
-        //    PSI = 3,
-        //    TEMPCels = 4,
-        //}
 
         public void GenerateData()
         {
@@ -43,18 +20,67 @@ namespace Lib.Core.Generation
                 
                 for (int j = 0; j < 4; j++)
                 {
-                    var entry = new DataEntry
+                    if(j == 0)
                     {
-                        // add all fields except id...
-                        DeviceName = "random",
-                        DeviceType = "test",
-                        Timestamp = DateTime.Now,
-                        UOM1 = "test",
-                        UOM1Value = double.Parse(rnd.Next(49, 52) + "." + rnd.Next(0, 100000000)),
-                        UOM2 = "test",
-                        UOM2Value = double.Parse(rnd.Next(-111, -109) + "." + rnd.Next(0, 100000000)),
-                    }; 
-                    db.Add(entry);
+                        var entry = new DataEntry
+                        {
+                            // add all fields except id...
+                            DeviceName = "Elec",
+                            DeviceType = "Electric",
+                            Timestamp = DateTime.Now,
+                            UOM1 = "kWH",
+                            UOM1Value = double.Parse(rnd.Next(0, 100) + "." + rnd.Next(0, 100000000)),
+                            UOM2 = "kVA",
+                            UOM2Value = double.Parse(rnd.Next(0, 10) + "." + rnd.Next(0, 100000000)),
+                        };
+                        db.Add(entry);
+                    }
+                    else if (j == 1)
+                    {
+                        var entry = new DataEntry
+                        {
+                            // add all fields except id...
+                            DeviceName = "GEO",
+                            DeviceType = "GPS",
+                            Timestamp = DateTime.Now,
+                            UOM1 = "Latitude",
+                            UOM1Value = double.Parse(rnd.Next(49, 52) + "." + rnd.Next(0, 100000000)),
+                            UOM2 = "Longitude",
+                            UOM2Value = double.Parse(rnd.Next(-111, -109) + "." + rnd.Next(0, 100000000)),
+                        };
+                        db.Add(entry);
+                    }
+                    else if (j == 2)
+                    {
+                        var entry = new DataEntry
+                        {
+                            // add all fields except id...
+                            DeviceName = "GMetero",
+                            DeviceType = "GAS",
+                            Timestamp = DateTime.Now,
+                            UOM1 = "CF",
+                            UOM1Value = double.Parse(rnd.Next(0, 1000) + "." + rnd.Next(0, 100000000)),
+                            UOM2 = "PSI",
+                            UOM2Value = double.Parse(rnd.Next(0, 2) + "." + rnd.Next(0, 100000000)),
+                        };
+                        db.Add(entry);
+                    }
+                    else if (j == 3)
+                    {
+                        var entry = new DataEntry
+                        {
+                            // add all fields except id...
+                            DeviceName = "Elec",
+                            DeviceType = "Electric",
+                            Timestamp = DateTime.Now,
+                            UOM1 = "CM",
+                            UOM1Value = double.Parse(rnd.Next(0, 100) + "." + rnd.Next(0, 100000000)),
+                            UOM2 = "Celsius",
+                            UOM2Value = double.Parse(rnd.Next(-3, 30) + "." + rnd.Next(0, 100000000)),
+                        };
+                        db.Add(entry);
+                    }
+
                 }
             }
 
