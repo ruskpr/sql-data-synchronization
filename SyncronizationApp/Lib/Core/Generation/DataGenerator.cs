@@ -13,9 +13,9 @@ namespace Lib.Core.Generation
 
         public void GenerateData()
         {
-            SqliteContext db = new SqliteContext();
+            SqliteContext sqliteDb = new SqliteContext();
             Random rnd = new Random();
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 100; i++)
             {
                 
                 for (int j = 0; j < 4; j++)
@@ -33,7 +33,7 @@ namespace Lib.Core.Generation
                             UOM2 = "kVA",
                             UOM2Value = double.Parse(rnd.Next(0, 10) + "." + rnd.Next(0, 100000000)),
                         };
-                        db.Add(entry);
+                        sqliteDb.Add(entry);
                     }
                     else if (j == 1)
                     {
@@ -48,7 +48,7 @@ namespace Lib.Core.Generation
                             UOM2 = "Longitude",
                             UOM2Value = double.Parse(rnd.Next(-111, -109) + "." + rnd.Next(0, 100000000)),
                         };
-                        db.Add(entry);
+                        sqliteDb.Add(entry);
                     }
                     else if (j == 2)
                     {
@@ -63,7 +63,7 @@ namespace Lib.Core.Generation
                             UOM2 = "PSI",
                             UOM2Value = double.Parse(rnd.Next(0, 2) + "." + rnd.Next(0, 100000000)),
                         };
-                        db.Add(entry);
+                        sqliteDb.Add(entry);
                     }
                     else if (j == 3)
                     {
@@ -78,13 +78,13 @@ namespace Lib.Core.Generation
                             UOM2 = "Celsius",
                             UOM2Value = double.Parse(rnd.Next(-3, 30) + "." + rnd.Next(0, 100000000)),
                         };
-                        db.Add(entry);
+                        sqliteDb.Add(entry);
                     }
 
                 }
             }
 
-            db.SaveChanges();
+            sqliteDb.SaveChanges();
         }
     }
 }

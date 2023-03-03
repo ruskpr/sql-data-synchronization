@@ -26,10 +26,7 @@ namespace Lib.Core.EF.DbContexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //string connString = System.Configuration.ConfigurationManager.ConnectionStrings["sqlite"].ConnectionString;
-
-
-            string connString = $"Data source = E:/offlineData.db";
+            string connString = System.Configuration.ConfigurationManager.ConnectionStrings["sqlite"].ConnectionString;
             optionsBuilder.UseSqlite(connString);
         }
     }

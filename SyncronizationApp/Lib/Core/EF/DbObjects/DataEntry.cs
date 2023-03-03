@@ -2,7 +2,7 @@
 {
     public class DataEntry
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string DeviceName { get; set; }
         public string DeviceType { get; set; }
         public DateTime Timestamp { get; set; }

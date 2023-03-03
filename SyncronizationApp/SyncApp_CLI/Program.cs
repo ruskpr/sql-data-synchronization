@@ -11,9 +11,9 @@ namespace SQL_syncing_service
             int delay = AppConfig.SyncIntervalInMilliseconds;
             while (true)
             {
-                // [method to sync data goes here] ex. SyncData()
-                Thread.Sleep(delay);
-                WindowsNotification.Show(NotiType.SyncSuccess);
+                Lib.Core.Synchronization.Sync.SyncData();
+                
+                Thread.Sleep(delay); // wait x amount of seconds 
             }
 
         }
