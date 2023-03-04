@@ -65,11 +65,23 @@ namespace Lib.Core.Synchronization
                 List<DataEntry> offlineRecords = sqlite.DataEntries.ToList();
                 if (sqlite.DataEntries.Count() > 0)
                 {
-                    // set ids to null to avoid auto increment exception
-                    offlineRecords.ForEach(x => x.Id = null);
+                    // convert records
+                    foreach (var record in offlineRecords)
+                    {
+                        var convertedRecord = new DataEntry()
+                        {
+                            DeviceName = record.DeviceName,
+                            DeviceType = record.DeviceType,
+                            Timestamp = record.Timestamp,
+                            UOM1 = record.UOM1,
+                            UOM1Value = record.UOM1Value,
+                            UOM2 = record.UOM2,
+                            UOM2Value = record.UOM2Value,
+                        };
 
-                    // add all offline data to online db
-                    sqlServer.AddRange(offlineRecords);
+                        // add all offline data to online db
+                        sqlServer.Add(convertedRecord);
+                    }
 
                     // remove all items from sqlite database
                     sqlite.RemoveRange(offlineRecords);

@@ -28,10 +28,28 @@ namespace SyncApp_GUI.Pages
             dgData.ItemsSource = sqlite.DataEntries.ToList();
         }
 
-        private async Task btnGenerateData_Click(object sender, RoutedEventArgs e)
+        private async void btnGenerateData_Click(object sender, RoutedEventArgs e)
         {
             Lib.Core.Generation.DataGenerator generator = new Lib.Core.Generation.DataGenerator();
-            await Task.Run(() => generator.GenerateData(50));
+
+
+            int numRecords = 0;
+            bool isValidNumber = int.TryParse(tbNumRecords.Text, out numRecords);
+            if (isValidNumber && numRecords > 0 && numRecords < 5001)
+            {
+                lbErrorMsg.Text = "";
+                btnGenerate.Content = $"Generating {numRecords} records...";
+                await Task.Run(() => generator.GenerateData(numRecords));
+
+            }
+            else
+            {
+                lbErrorMsg.Text = "Invalid number, enter a value up to 5000";
+                tbNumRecords.Text = "";
+                return;
+            }
+
+            btnGenerate.Content = $"Generate random records";
             dgData.ItemsSource = sqlite.DataEntries.ToList();
         }
     }

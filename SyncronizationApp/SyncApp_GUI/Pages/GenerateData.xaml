@@ -11,8 +11,8 @@
     <Grid>
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="*" />
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -34,16 +34,36 @@
                        Text="On this page you can view your offline data store where all your unsynchronized data is wait for an online connection"
                        TextWrapping="Wrap"
                        Height="50" />
-
-            <Button Click="btnGenerateData_Click"
-                    HorizontalAlignment="Left"
-                    Margin="20"
-                    Width="200">Generate Random Data</Button>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Number of records: "
+                       VerticalAlignment="Center"
+                       FontSize="16"/>
+                <TextBox x:Name="tbNumRecords"
+                         Width="150"
+                         FontSize="20"
+                         Foreground="White"
+                         VerticalAlignment="Center"
+                         AcceptsReturn="True"
+                         Style="{StaticResource MaterialDesignTextBox}"
+                         Height="35"
+                         TextWrapping="NoWrap" />
+                
+                <Button x:Name="btnGenerate"
+                        Click="btnGenerateData_Click"
+                        HorizontalAlignment="Left"
+                        Margin="20"
+                        Width="200"
+                        Content="Generate random data"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        />
+                
+            </StackPanel>
+            
 
             <TextBlock x:Name="lbErrorMsg"
                        Foreground="Red"
                        Text=""
-                       Margin="0,20,0,0"
+                       Margin="0,10,0,0"
                        Style="{StaticResource MaterialDesignButtonTextBlock}" />
         </StackPanel>
 
