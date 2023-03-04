@@ -84,7 +84,7 @@ namespace Lib.Core.Synchronization
                 sqlServer.Synchronizations.Add(syncRecord);
 
                 // update both databases
-                int records = sqlServer.SaveChanges();
+                int records = sqlServer.SaveChanges() - 1;
                 sqlite.SaveChanges();
                 _isSyncing = false;
 
