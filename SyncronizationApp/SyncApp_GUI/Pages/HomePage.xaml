@@ -13,17 +13,16 @@
             <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}"
                        Foreground="White"
                        TextAlignment="Center"
-                       
-                       Text="Background Service Control Panel" />
+                       Text="SQL Sync Service Control Panel" />
             <StackPanel Orientation="Horizontal" 
                         HorizontalAlignment="Center"
-                        Margin="20">
+                        Margin="10">
                 
             <Button x:Name="btnStartBgService"
                     Click="btnStartBgService_Click"
                     Content="Start Service"
                     Width="150"
-                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Margin="5"
                     Style="{StaticResource MaterialDesignRaisedLightButton}"
                     ToolTip="Resource name: MaterialDesignRaisedLightButton" />
                 
@@ -31,7 +30,7 @@
                     Click="btnKillBgService_Click"
                     Content="Stop Service"
                     Width="150"
-                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Margin="5"
                     Style="{StaticResource MaterialDesignRaisedLightButton}"
                     ToolTip="Resource name: MaterialDesignRaisedLightButton" />
             </StackPanel>
@@ -42,6 +41,26 @@
                        TextAlignment="Center"
                        Text="Status: Unknown" />
             
+            <StackPanel>
+                <TextBlock Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                           Foreground="White"
+                           TextAlignment="Left"
+                           Margin="20"
+                           Text="Your Configuration" />
+                <Label x:Name="lbServer"
+                       Margin="20,0"
+                       FontSize="18"
+                       Content="Server=" />
+                <Label x:Name="lbDatabase"
+                       Margin="20,0"
+                       FontSize="18"
+                       Content="Database=" />
+                <Label x:Name="lbOfflineDB"
+                       Margin="20,0"
+                       FontSize="18"
+                       Content="Offline data store: " />
+            </StackPanel>
         </StackPanel>
+        
     </Grid>
 </Page>

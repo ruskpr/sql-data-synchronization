@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -14,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using Windows.Devices.Display.Core;
 
 namespace SyncApp_GUI.Pages
 {
@@ -30,6 +32,21 @@ namespace SyncApp_GUI.Pages
             timer.Tick += Timer_Tick;
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Start();
+
+            DisplayDbConfiguration();
+        }
+
+        private void DisplayDbConfiguration()
+        {
+            string sqlConnString = ConfigurationManager.ConnectionStrings["sqlserver"].ConnectionString;
+            string sqliteConnString = ConfigurationManager.ConnectionStrings["sqlite"].ConnectionString;
+            string server = sqlConnString.Split(';')[0];
+            string database = sqlConnString.Split(';')[1];
+            string localDb = sqliteConnString.Split("=")[1];
+
+            lbServer.Content = server;
+            lbDatabase.Content = database;
+            lbOfflineDB.Content = "Offline data store: " + localDb;
         }
 
         private void Timer_Tick(object? sender, EventArgs e)
