@@ -53,7 +53,7 @@ namespace SyncApp_GUI.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SyncApp_GUI;component/pages/settings.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SyncApp_GUI;V1.0.0.0;component/pages/settings.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\Settings.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -1,6 +1,7 @@
 ﻿using Lib.Core.EF.DbContexts;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace SyncApp_GUI.Pages
 {
@@ -25,6 +27,25 @@ namespace SyncApp_GUI.Pages
         public GenerateData()
         {
             InitializeComponent();
+            UpdateData();
+
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Tick += Timer_Tick;
+            timer.Interval = new TimeSpan(0, 0, 10);
+            timer.Start();
+        }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            Task.Run(() => UpdateData());
+        }
+
+        private void UpdateData()
+        {
+            var offlineData = sqlite.DataEntries.ToList();
+            dgData.ItemsSource = offlineData;
+            lbRecordsToSync.Content = "Records to sync: " + offlineData.Count;
+            lbDataStorePath.Content = ConfigurationManager.ConnectionStrings["sqlite"].ConnectionString;
             dgData.ItemsSource = sqlite.DataEntries.ToList();
         }
 
@@ -39,7 +60,7 @@ namespace SyncApp_GUI.Pages
             {
                 lbErrorMsg.Text = "";
                 btnGenerate.Content = $"Generating {numRecords} records...";
-                await Task.Run(() => generator.GenerateData(numRecords));
+                generator.GenerateData(numRecords);
 
             }
             else
@@ -50,7 +71,7 @@ namespace SyncApp_GUI.Pages
             }
 
             btnGenerate.Content = $"Generate random records";
-            dgData.ItemsSource = sqlite.DataEntries.ToList();
+            UpdateData();
         }
     }
 }
