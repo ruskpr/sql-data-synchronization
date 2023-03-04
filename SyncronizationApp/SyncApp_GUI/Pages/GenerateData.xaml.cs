@@ -28,10 +28,10 @@ namespace SyncApp_GUI.Pages
             dgData.ItemsSource = sqlite.DataEntries.ToList();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async Task btnGenerateData_Click(object sender, RoutedEventArgs e)
         {
             Lib.Core.Generation.DataGenerator generator = new Lib.Core.Generation.DataGenerator();
-            generator.GenerateData(20);
+            await Task.Run(() => generator.GenerateData(50));
             dgData.ItemsSource = sqlite.DataEntries.ToList();
         }
     }

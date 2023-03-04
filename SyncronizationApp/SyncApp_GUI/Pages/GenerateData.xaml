@@ -28,29 +28,39 @@
 
             <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}"
                        Foreground="White"
-                       Text="Generate Random Data" />
+                       Text="Offline Data Store" />
             <TextBlock Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
                        Foreground="White"
-                       Text="Click On the button to generate Random Data" />
+                       Text="On this page you can view your offline data store where all your unsynchronized data is wait for an online connection"
+                       TextWrapping="Wrap"
+                       Height="50" />
 
-            <Button Click="Button_Click">Generate Data</Button>
+            <Button Click="btnGenerateData_Click"
+                    HorizontalAlignment="Left"
+                    Margin="20"
+                    Width="200">Generate Random Data</Button>
 
-            <TextBlock x:Name="lbErrorMsg" Foreground="Red"
+            <TextBlock x:Name="lbErrorMsg"
+                       Foreground="Red"
                        Text=""
                        Margin="0,20,0,0"
-                Style="{StaticResource MaterialDesignButtonTextBlock}"
-                        />
+                       Style="{StaticResource MaterialDesignButtonTextBlock}" />
         </StackPanel>
 
-        <DataGrid x:Name="dgData"
-                  Grid.Row="1"
-                  Grid.Column="1"
-                  Grid.ColumnSpan="3"
-                  CanUserAddRows="False"
-                  IsReadOnly="True"
-                  AutoGenerateColumns="True"
-                  SelectionMode="Extended"
-                  SelectionUnit="Cell" />
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3">
+            
+            <Label x:Name="lbDataStoreLocation" />
+            <Label x:Name="lbRecords" />
+            <DataGrid x:Name="dgData"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      AutoGenerateColumns="True"
+                      SelectionMode="Extended"
+                      SelectionUnit="Cell" />
+
+        </StackPanel>
 
     </Grid>
    
