@@ -70,8 +70,8 @@ namespace Lib.Core.Generation
                         var entry = new DataEntry
                         {
                             // add all fields except id...
-                            DeviceName = "Elec",
-                            DeviceType = "Electric",
+                            DeviceName = "H20Meter",
+                            DeviceType = "H20",
                             Timestamp = DateTime.Now,
                             UOM1 = "CM",
                             UOM1Value = double.Parse(rnd.Next(0, 100) + "." + rnd.Next(0, 100000000)),
