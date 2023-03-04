@@ -15,12 +15,15 @@ namespace Lib.Core.Generation
         {
             SqliteContext sqliteDb = new SqliteContext();
             Random rnd = new Random();
-            for (int i = 0; i < numRecords / 4; i++)
+
+            int recordsCreated = 0;
+            for (int i = 0; i < numRecords; i++)
             {
-                
                 for (int j = 0; j < 4; j++)
                 {
-                    if(j == 0)
+                    if (recordsCreated == numRecords)
+                        break;
+                    if (j == 0)
                     {
                         var entry = new DataEntry
                         {
@@ -81,6 +84,7 @@ namespace Lib.Core.Generation
                         sqliteDb.Add(entry);
                     }
 
+                    recordsCreated++;
                 }
             }
 
