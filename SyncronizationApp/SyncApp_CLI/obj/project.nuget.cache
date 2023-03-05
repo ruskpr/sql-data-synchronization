@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UeCyKigac3GBfFXgh4tDsIY6NgAfp6H6cEitJaGgQ1pazjVqwuPG7MSTR+IUx0dBKKgnAxkO+N7F97RkuXh+4g==",
+  "dgSpecHash": "vxaVRm1g5FIlG/hHkn8tJLeDEoppzEgoROQlMzlQMXe+vDos6HNHUnFAArLWa8nlCr7GXeYJMj4NSGhiZjTlOg==",
   "success": true,
-  "projectFilePath": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\SyncApp_CLI\\SQL_syncing_service.csproj",
+  "projectFilePath": "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\SyncApp_CLI\\SQL_syncing_service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rustu.koprulu\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\rustu.koprulu\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

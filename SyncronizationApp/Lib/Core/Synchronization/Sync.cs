@@ -68,6 +68,7 @@ namespace Lib.Core.Synchronization
                     // convert records
                     foreach (var record in offlineRecords)
                     {
+                        // copy record with id field to avoid PK conflicts
                         var convertedRecord = new DataEntry()
                         {
                             DeviceName = record.DeviceName,
@@ -84,6 +85,7 @@ namespace Lib.Core.Synchronization
                     }
 
                     // remove all items from sqlite database
+                    // to ensure that they were 
                     sqlite.RemoveRange(offlineRecords);
                 }
 
@@ -96,13 +98,13 @@ namespace Lib.Core.Synchronization
                 sqlServer.Synchronizations.Add(syncRecord);
 
                 // update both databases
-                int records = sqlServer.SaveChanges() - 1;
+                int recordCount = sqlServer.SaveChanges() - 1;
                 sqlite.SaveChanges();
                 _isSyncing = false;
 
                 // show message
                 WindowsNotification.Show("Successfully syncronized!",
-                                        $"{records.ToString("n")} records added to the online database.");
+                                        $"{recordCount} records added to the online database.");
             }
 
         }

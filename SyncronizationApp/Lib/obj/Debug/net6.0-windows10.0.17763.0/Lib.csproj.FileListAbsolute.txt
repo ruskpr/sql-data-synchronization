@@ -12,3 +12,17 @@ E:\russ\repos\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-wi
 E:\russ\repos\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.pdb
 E:\russ\repos\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.genruntimeconfig.cache
 E:\russ\repos\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\ref\Lib.dll
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\bin\Debug\net6.0-windows10.0.17763.0\Lib.deps.json
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\bin\Debug\net6.0-windows10.0.17763.0\Lib.runtimeconfig.json
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\bin\Debug\net6.0-windows10.0.17763.0\Lib.dll
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\bin\Debug\net6.0-windows10.0.17763.0\Lib.pdb
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.csproj.AssemblyReference.cache
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.GeneratedMSBuildEditorConfig.editorconfig
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.AssemblyInfoInputs.cache
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.AssemblyInfo.cs
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.csproj.CoreCompileInputs.cache
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.dll
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\refint\Lib.dll
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.pdb
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\Lib.genruntimeconfig.cache
+E:\russ\sql-data-synchronization\SyncronizationApp\Lib\obj\Debug\net6.0-windows10.0.17763.0\ref\Lib.dll

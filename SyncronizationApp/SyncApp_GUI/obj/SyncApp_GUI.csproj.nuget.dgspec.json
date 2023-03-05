@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj": {}
+    "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj": {}
   },
   "projects": {
-    "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj": {
+    "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj",
+        "projectUniqueName": "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj",
         "projectName": "Lib",
-        "projectPath": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj",
+        "projectPath": "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj",
         "packagesPath": "C:\\Users\\rustu.koprulu\\.nuget\\packages\\",
-        "outputPath": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\Lib\\obj\\",
+        "outputPath": "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\Lib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -108,14 +108,14 @@
         }
       }
     },
-    "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj": {
+    "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj",
+        "projectUniqueName": "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj",
         "projectName": "SyncApp_GUI",
-        "projectPath": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj",
+        "projectPath": "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\SyncApp_GUI.csproj",
         "packagesPath": "C:\\Users\\rustu.koprulu\\.nuget\\packages\\",
-        "outputPath": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\obj\\",
+        "outputPath": "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\SyncApp_GUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -138,8 +138,8 @@
           "net6.0-windows10.0.17763": {
             "targetAlias": "net6.0-windows10.0.17763.0",
             "projectReferences": {
-              "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj": {
-                "projectPath": "E:\\russ\\repos\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj"
+              "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj": {
+                "projectPath": "E:\\russ\\sql-data-synchronization\\SyncronizationApp\\Lib\\Lib.csproj"
               }
             }
           }
